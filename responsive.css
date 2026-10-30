@@ -1,0 +1,20 @@
+.stage { width:100%; }
+.touch-controls { padding: 14px 12px; background: #f6f1e5; }
+.game-shell:fullscreen { display:flex; flex-direction:column; width:100vw; height:100vh; border:0; border-radius:0; }
+.game-shell:fullscreen .stage { flex:1; min-height:0; aspect-ratio:auto; }
+.game-shell:fullscreen .game-bottom { display:none; }
+.game-shell:fullscreen .touch-controls { position:static; flex-shrink:0; }
+.game-shell:fullscreen .game-toolbar { flex-shrink:0; }
+.game-shell:fullscreen #game { object-fit:fill; }
+@media(max-width:760px) {
+  .stage:has(#selection:not([hidden])) { min-height:350px; }
+  .intro h1 span { display:block; }
+  .intro h1 { font-size:26px; }
+  .touch-controls { padding:14px 10px; }
+  .game-shell:fullscreen .stage:has(#selection:not([hidden])) { min-height:0; }
+}
+@media(max-height:520px) and (orientation:landscape) {
+  .stage:has(#selection:not([hidden])) { min-height:0; }
+  .touch-controls { background:transparent; }
+  .game-shell:fullscreen .touch-controls { position:fixed; }
+}

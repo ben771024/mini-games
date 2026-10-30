@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f1e5"><title>柴柴出走中 — SHIBA DAYS</title>
+  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <header><a class="brand" href="./"><span class="brand-icon">✦</span> SHIBA DAYS<span class="brand-sub">柴柴出走中</span></a><div class="edition"><span></span> PLAYABLE PROTOTYPE <b>01</b></div></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">A LITTLE PAW. A BIG ADVENTURE.</p><h1>今天，也要出去<span>汪一場。</span></h1><p class="description">跟著桂桂和 Miso，一起把平凡的散步變成冒險。</p></div><div class="chapter"><span>第一站</span><strong>日和商店街</strong><small>HIYORI SHOPPING STREET ↗</small></div></section>
+    <section class="game-shell" aria-label="柴柴冒險遊戲">
+      <div class="game-toolbar"><div><span class="live-dot"></span> <span id="status">選一隻柴柴，一起出發</span></div><div class="tools"><button id="sound" aria-label="開啟音效">音效 OFF</button><button id="pause" disabled>暫停 ⏸</button><button id="restart" title="重新選擇角色">重選 ↺</button><button id="fullscreen" title="全螢幕">全螢幕 ⛶</button></div></div>
+      <div class="stage choosing" id="stage">
+        <canvas id="game" width="960" height="480" aria-label="橫向卷軸遊戲畫面"></canvas>
+        <div class="hud" id="hud" hidden><div><span id="character-label"></span><span id="health"></span></div><div class="hud-right"><span class="coin-icon">●</span> <span id="coins">00</span><span class="hud-divider">/</span><span id="total"></span><span id="clock">00:00</span></div></div>
+        <div class="overlay" id="selection"><div class="selection-heading"><p>READY FOR A WALK?</p><h2>今天，誰去冒險？</h2><span>選擇你的柴柴夥伴</span></div><div class="characters"><button class="character selected" data-dog="gui" aria-pressed="true"><span class="dog-art"><canvas id="gui-art" width="180" height="100"></canvas></span><span class="dog-name">桂桂 <small>GUIGUI</small></span><span class="dog-note">黑柴・小巧的街頭探險家</span><span class="dog-trait">輕快腳步 <b>↗ 跳得更高</b></span><span class="select-mark">✓</span></button><button class="character" data-dog="miso" aria-pressed="false"><span class="dog-art"><canvas id="miso-art" width="180" height="100"></canvas></span><span class="dog-name">Miso <small>ミソ</small></span><span class="dog-note">赤柴・大隻的散步隊長</span><span class="dog-trait">厚實手掌 <b>✦ 攻擊更遠</b></span><span class="select-mark">✓</span></button></div><button class="start-button" id="start">散步出發 <span>→</span></button><p class="selection-tip">撿起金幣、揮出柴掌，沿著街道找到回家的路。</p></div>
+        <div class="overlay end-overlay" id="result" hidden><div class="result-card"><p id="result-eyebrow"></p><h2 id="result-title"></h2><p id="result-copy"></p><button class="start-button" id="again">再散步一次 ↺</button><button class="text-button" id="change">換一隻柴柴</button></div></div>
+        <div class="paused" id="paused" hidden><strong>散步休息中</strong><span>按 P 或「繼續」回到冒險</span><button id="resume">繼續散步 →</button></div>
+      </div>
+      <div class="game-bottom"><span><i>01</i> 日和商店街 <span class="muted">/ 一段剛剛好的冒險</span></span><span class="goal">終點目標 <b>找到柴柴小屋 ⚑</b></span></div>
+    <div class="touch-controls" aria-label="觸控操作"><div><button data-action="left" aria-label="向左">◀</button><button data-action="right" aria-label="向右">▶</button></div><div><button data-action="attack" class="attack-control">掌<span>攻擊</span></button><button data-action="jump" class="jump-control">↑<span>跳躍</span></button></div></div>
+    </section>
+    <section class="instructions"><div class="instructions-title"><span>HOW TO PLAY</span><h3>散步生存指南</h3></div><div class="instruction"><div><kbd>←</kbd><kbd>→</kbd><span>或 A / D</span></div><strong>左右移動</strong><p>走走停停，探索這條街</p></div><div class="instruction"><div><kbd>SPACE</kbd><span>或 ↑ / W</span></div><strong>輕巧一跳</strong><p>跳上遮雨棚，發現小驚喜</p></div><div class="instruction"><div><kbd>J</kbd><span>或 X</span></div><strong>柴柴手掌</strong><p>面向對手，勇敢揮出一掌</p></div><div class="mobile-note"><span>✦</span><p>手機也能玩<small>使用畫面下方的觸控按鈕<br>橫放手機，視野更開闊</small></p></div></section>
+    <footer><span>SHIBA DAYS <b>散步，是每天的小冒險。</b></span><span>LEVEL 01 · 像素街道試玩版</span></footer>
+  </main><script src="game.js"></script>
+</body></html>
+

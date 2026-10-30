@@ -1,0 +1,7 @@
+# Local visual references, not required by the game.
+Gemini_Generated_Image_*.jpg
+ss_*.jpg
+character-preview.json
+node_modules/
+.DS_Store
+Thumbs.db
